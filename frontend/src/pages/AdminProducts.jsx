@@ -104,7 +104,7 @@ export default function AdminProducts() {
             <tr key={p.id}>
               <td>{p.id}</td>
               <td>{p.name}</td>
-              <td>${p.price.toFixed(2)}</td>
+              <td>${Number(p.price).toFixed(2)}</td>
               <td>{p.stock}</td>
               <td>
                 <button className="btn btn-small" onClick={() => openEdit(p)}>Editar</button>

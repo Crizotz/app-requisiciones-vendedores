@@ -41,7 +41,7 @@ export default function AdminOrders() {
                   <span className="order-date">{new Date(order.created_at).toLocaleString('es-MX')}</span>
                 </div>
                 <div>
-                  <strong>${order.total.toFixed(2)}</strong>
+                  <strong>${Number(order.total).toFixed(2)}</strong>
                   <span className="order-user"> - {order.user_name}</span>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function AdminOrders() {
                         <tr key={item.id}>
                           <td>{item.product_name}</td>
                           <td>{item.quantity}</td>
-                          <td>${item.price.toFixed(2)}</td>
+                          <td>${Number(item.price).toFixed(2)}</td>
                           <td>${(item.quantity * item.price).toFixed(2)}</td>
                         </tr>
                       ))}

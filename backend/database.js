@@ -1,5 +1,7 @@
-const { Pool } = require('pg');
+const { Pool, types } = require('pg');
 const bcrypt = require('bcryptjs');
+
+types.setTypeParser(1700, parseFloat);
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/requisiciones',

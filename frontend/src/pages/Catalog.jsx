@@ -38,7 +38,7 @@ export default function Catalog() {
           <div key={product.id} className="product-card">
             <h3>{product.name}</h3>
             <p className="product-desc">{product.description}</p>
-            <p className="product-price">${product.price.toFixed(2)}</p>
+            <p className="product-price">${Number(product.price).toFixed(2)}</p>
             <p className={`product-stock ${product.stock <= 5 ? 'low-stock' : ''}`}>
               Stock: {product.stock}
             </p>

@@ -59,7 +59,7 @@ export default function Cart() {
               <div key={item.product_id} className="cart-item">
                 <div className="cart-item-info">
                   <h3>{item.name}</h3>
-                  <p>${item.price.toFixed(2)} c/u</p>
+                  <p>${Number(item.price).toFixed(2)} c/u</p>
                 </div>
                 <div className="cart-item-actions">
                   <button className="btn btn-small" onClick={() => updateQuantity(item.product_id, -1)}>-</button>
